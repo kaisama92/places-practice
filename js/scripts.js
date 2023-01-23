@@ -70,7 +70,12 @@ function displayPlacesDetails(event) {
   document.querySelector("div#places-details").removeAttribute("class");
 }
 
-
+function handleDelete(event) {
+  placesList.deletePlace(event.target.id);
+  document.querySelector("button.delete").removeAttribute("id");
+  document.querySelector("div#places-details").setAttribute("class", "hidden");
+  listPlaces(placesList);
+}
 
 function handleFormSubmission(event) {
   event.preventDefault();
@@ -95,4 +100,5 @@ function handleFormSubmission(event) {
 window.addEventListener("load", function() {
   document.querySelector("form#new-place").addEventListener("submit", handleFormSubmission);
   document.querySelector("div#places").addEventListener("click", displayPlacesDetails);
+  this.document.querySelector("button.delete").addEventListener("click", handleDelete);
 });

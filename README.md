@@ -77,3 +77,30 @@ Test: "It should delete place with correspoding id from the list"
 Code: 
 PlacesList.deletePlace(1);
 Expected Output: true
+
+Describe:  listPlaces(placesListToDisplay)
+
+Test: "It should display all places added by user as a list"
+Code: 
+listPlaces(placesList);
+Expected Output: "* Portland United States 2020-05-05
+
+Describe:  displayPlacesDetails()
+
+Test: "It should display the details of on place if user clicks on it"
+Code: 
+document.querySelector("div#places").addEventListener("click", displayPlacesDetails);
+Expected Output: 
+Contact Details:
+City Name: Portland
+Country Name: United States
+Date: 2020-05-05
+Landmarks: Rose Garden, Moda Center
+Notes: Bring a rainproof jacket.
+
+Describe:  handleDelete()
+
+Test: "It should delete the place from the list"
+Code: 
+document.querySelector("button.delete").addEventListener("click", handleDelete);
+Expected Output: the list of all places but deleted is displayed
