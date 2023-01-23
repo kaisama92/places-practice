@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+    crossorigin="anonymous">
+  <script src="js/scripts.js"></script>
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <title>Places I've been to</title>
+</head>
+<body>
+  <h1>Places I've been to</h1>
+  <h2>Add a Place:</h2>
+  <form id = "new-place">
+    <label for="new-city-name">City Name</label>
+    <input type="text" id="new-city-name" name="new-city-name">
+    <label for="new-country-name">Country Name</label>
+    <input type="text" id="new-country-name" name="new-country-name">
+    <label for="new-date-visited">Date</label>
+    <input type="date" id="new-date-visited" name="new-date-visited">
+    <label for="new-landmarks">Landmarks</label>
+    <input type="text" id="new-landmarks" name="new-landmarks">
+    <label for="new-notes">Notes</label>
+    <input type="text" id="new-notes" name="new-notes">
+    <button type="submit">Add</button>
+  </form>
+  <br>
+  <br>
+
+    <h2>Places List</h2>
+    <div id="places">
+
+    </div>
+
+    <div id="places" class="hidden">
+      <p>City Name: <span id="city-name"></span></p>
+      <p>Country Name: <span id="country-name"></span></p>
+      <p>Date: <span id="date"></span></p>
+      <p>Landmarks: <span id="landmarks"></span></p>
+      <p>Notes: <span id="notes"></span></p>
+    </div>
+</body>
+</html>
